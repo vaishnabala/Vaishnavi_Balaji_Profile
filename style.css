@@ -103,15 +103,15 @@ nav a:hover {
 
 /* Ocean Blue Gradient Background */
 #about {
-    background: linear-gradient(to bottom, #71a9e9, #3e82d4);
+    background: linear-gradient(to bottom,  #3e82d4, #114677);
 }
 
 #projects {
-    background: linear-gradient(to bottom, #3e82d4, #2364aa);
+    background: linear-gradient(to bottom, #3e82d4, #114677);
 }
 
 #contact {
-    background: linear-gradient(to bottom, #2364aa, #114677);
+    background: linear-gradient(to bottom, #3e82d4, #114677);
 }
 
 /* Footer */
