@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     scroll-behavior: smooth;
     font-family: Arial, sans-serif; /* Consistent font style */
+    height: 100%; /* Ensure full height for scroll */
 }
 
 /* Header Navigation */
@@ -46,6 +47,7 @@ nav a:hover {
     text-align: center;
     padding: 20px;
     color: white;
+    flex-direction: column; /* Stack content vertically */
 }
 
 /* About Section Styling */
@@ -73,6 +75,32 @@ nav a:hover {
     padding-left: 30px;
 }
 
+/* About content layout - Row layout */
+.about-content {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px; /* Space between text and image */
+    max-width: 600px; /* Limit width for better readability */
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
 /* Ocean Blue Gradient Background */
 #about {
     background: linear-gradient(to bottom, #71a9e9, #3e82d4);
@@ -94,7 +122,8 @@ footer {
     padding: 10px 0;
 }
 
-
 nav a.active {
     color: yellow;
 }
+
+
