@@ -3,29 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Scroll Tab Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Hi!! This is Vaishnavi Balaji here</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write something about yourself here.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Showcase your projects here.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-    </section>
+    <main class="scroll-container">
+        <section id="about" class="scroll-section">
+            <h1>About Me</h1>
+            <p>Hello! I'm a passionate web developer with a background in technology and a love for building dynamic and innovative solutions. Below are some details about my academic journey, work experience, and skills.</p>
+        
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Bachelor's Degree in Computer Science</strong> - XYZ University (2018 - 2022)</li>
+                <li><strong>Certification in Web Development</strong> - ABC Academy (2023)</li>
+            </ul>
+        
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Front-end Developer</strong> - Tech Solutions Inc. (2022 - Present)
+                    <ul>
+                        <li>Developed responsive websites using HTML, CSS, and JavaScript.</li>
+                        <li>Collaborated with back-end developers to create seamless user experiences.</li>
+                        <li>Worked on UI/UX design improvements, focusing on usability.</li>
+                    </ul>
+                </li>
+                <li><strong>Intern</strong> - CodeLab Technologies (2021)
+                    <ul>
+                        <li>Assisted in web application testing and debugging.</li>
+                        <li>Contributed to front-end code for internal tools and documentation.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> HTML, CSS, JavaScript, Python</li>
+                <li><strong>Web Technologies:</strong> React, Node.js, Bootstrap, jQuery</li>
+                <li><strong>Tools:</strong> Git, GitHub, Visual Studio Code, Figma</li>
+                <li><strong>Soft Skills:</strong> Problem-solving, Communication, Teamwork</li>
+            </ul>
+        </section>
+        
+        <section id="projects" class="scroll-section">
+            <h1>My Projects</h1>
+            <ul>
+                <li>Project 1: <a href="#">GitHub Repo</a></li>
+                <li>Project 2: <a href="#">Live Demo</a></li>
+            </ul>
+        </section>
+        <section id="contact" class="scroll-section">
+            <h1>Contact Me</h1>
+            <p>Email: your-email@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
 </body>
 </html>
