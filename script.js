@@ -1,20 +1,31 @@
-// Highlight the active section in the navbar
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.scroll-section');
-    const navLinks = document.querySelectorAll('nav a');
+// // script.js
 
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 50) {
-            current = section.getAttribute('id');
-        }
-    });
+// document.addEventListener('DOMContentLoaded', () => {
+//     const links = document.querySelectorAll('nav ul li a');
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
+//     links.forEach(link => {
+//         link.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             const targetId = link.getAttribute('href').substring(1);
+//             const targetSection = document.getElementById(targetId);
+
+//             targetSection.scrollIntoView({ behavior: 'smooth' });
+//         });
+//     });
+// });
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('nav ul li a');
+    const iframe = document.getElementById('content-frame');
+
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            iframe.src = `${targetId}.html`;
+        });
     });
 });
