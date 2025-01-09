@@ -38,13 +38,15 @@ body {
 
 header {
     background-color: #333;
-    color: #fff;
+    color: #311ca8;
     padding: 10px 0;
     text-align: center;
+
 }
 
 header h1 {
     margin: 0;
+    
 }
 
 
