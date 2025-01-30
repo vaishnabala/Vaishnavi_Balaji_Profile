@@ -6,6 +6,36 @@
     <link rel="stylesheet" href="styles.css">
     <title>My Portfolio - Blogs</title>
     <link rel="icon" href="title_star.png" type="image/x-icon">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            align-items: center; /* Center the images vertically */
+            overflow: hidden;
+            width: 300px; /* Adjust as needed */
+            height: 200px; /* Adjust as needed */
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 1s;
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+            opacity: 0; /* Hide images initially */
+        }
+        .image-container img:first-child {
+            opacity: 1; /* Display the first image by default */
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 300px; /* Adjust to match the image container width */
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,13 +50,30 @@
         </nav>
     </header>
     <main>
-        <section id ="blogs">
+        <section id="blogs">
             <h2>Blogs</h2>
             <ul>
                 <li>
-                <a href="https://medium.com/@vaishnaisme/multiple-criteria-decision-analysis-mcda-vs-machine-learning-algorithms-b60a7fa16ce2
-                " target="_blank">
-                Multiple-Criteria Decision Analysis (MCDA) Vs Machine Learning Algorithms </a>
+                    <a href="https://medium.com/@vaishnaisme/multiple-criteria-decision-analysis-mcda-vs-machine-learning-algorithms-b60a7fa16ce2" target="_blank">
+                        Multiple-Criteria Decision Analysis (MCDA) Vs Machine Learning Algorithms
+                    </a>
+                </li>
+                <!-- <li>Blog Post 2: will be updated shortly</li> -->
+            </ul>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <p id="clickText">I am blessed to get a chance to chair a session "AIML/ DL across all disciplines" and delivered a Keynote Lecture at a conference "Third Conference on IT Research & Innovation: IoT for a smarter Future, ICITRI 2025", St. Joseph's College, Hosur on 28th January 2025</p>
+                    <div class="image-container">
+                        <img src="Gift.jpg" alt="Image 1">
+                        <img src="Participation.jpg" alt="Image 2">
+                        <img src="Proceeeding.jpg" alt="Image 3">
+                        <img src="Tropy.jpeg" alt="Image 4">
+                    </div>
+                    <div class="nav-buttons">
+                        <button id="prevBtn">Previous</button>
+                        <button id="nextBtn">Next</button>
+                    </div>
                 </li>
                 <!-- <li>Blog Post 2: will be updated shortly</li> -->
             </ul>
@@ -35,5 +82,36 @@
     <footer>
         <p>&copy; 2025 My Portfolio</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.image-container img');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.opacity = (i === index) ? '1' : '0';
+                });
+            }
+
+            function showNextImage() {
+                if (currentIndex < images.length - 1) {
+                    currentIndex++;
+                    showImage(currentIndex);
+                }
+            }
+
+            function showPrevImage() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showImage(currentIndex);
+                }
+            }
+
+            showImage(currentIndex); // Show the first image by default
+
+            document.getElementById('nextBtn').addEventListener('click', showNextImage);
+            document.getElementById('prevBtn').addEventListener('click', showPrevImage);
+        });
+    </script>
 </body>
 </html>

@@ -190,3 +190,19 @@ iframe {
     height: 100%;
     border: none;
 }
+
+
+.image-container {
+    display: flex;
+    overflow: hidden;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    position: relative;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: -100%;
+    transition: right 1s;
+}
