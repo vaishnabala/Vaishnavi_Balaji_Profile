@@ -1,16 +1,18 @@
 body {
-     font-family: Arial, sans-serif;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      margin: 0;
      padding: 0;
-     line-height: 1.6;
+     background-color: #f4f4f9;
+     color: #333;
  }
  
  header {
      background-color: #333;
      color: #fff;
-     padding: 10px 0;
-     text-align: center;
-     position: relative;
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
  }
  
  .menu-toggle {
@@ -19,9 +21,6 @@ body {
      color: #fff;
      border: none;
      font-size: 24px;
-     position: absolute;
-     top: 10px;
-     right: 20px;
      cursor: pointer;
  }
  
@@ -29,38 +28,130 @@ body {
      list-style-type: none;
      padding: 0;
      display: flex;
-     justify-content: center;
- }
- 
- nav ul li {
-     margin-right: 15px;
+     gap: 15px;
  }
  
  nav ul li a {
      color: #fff;
      text-decoration: none;
+     transition: color 0.3s;
+ }
+ 
+ nav ul li a:hover {
+     color: #ddd;
  }
  
  main {
      padding: 20px;
-     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
  }
+ 
+ #intro {
+     max-width: 800px;
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ .intro-content {
+     display: flex;
+     align-items: center; /* Center the image vertically */
+     gap: 20px;
+ }
+
+
+
+
  
  .profile-pic {
      width: 150px;
      height: 150px;
-     border-radius: 50%;
+     object-fit: cover;
      margin-bottom: 20px;
+     animation: fadeIn 2s;
  }
  
- .social-links {
+
+ .intro-text {
+     padding: 20px;
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     flex: 1;
+     text-align: justify; /* Justify the text */
+ }
+
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f9;
+     color: #333;
+ }
+ 
+ header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .menu-toggle {
+     display: none;
+     background-color: #333;
+     color: #fff;
+     border: none;
+     font-size: 24px;
+     cursor: pointer;
+ }
+ 
+ nav ul {
+     list-style-type: none;
+     padding: 0;
+     display: flex;
+     gap: 15px;
+ }
+ 
+ nav ul li a {
+     color: #fff;
+     text-decoration: none;
+     transition: color 0.3s;
+ }
+ 
+ nav ul li a:hover {
+     color: #ddd;
+ }
+ 
+ main {
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ #publications {
+     max-width: 800px;
+     text-align: left;
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .publication-list {
      list-style-type: none;
      padding: 0;
  }
  
- .social-links li {
-     display: inline;
-     margin-right: 10px;
+ .publication-list li {
+     margin-bottom: 15px;
+     line-height: 1.6;
  }
  
  footer {
@@ -73,7 +164,7 @@ body {
      bottom: 0;
  }
  
- @media (max-width: 600px) {
+ @media (max-width: 768px) {
      .menu-toggle {
          display: block;
      }
@@ -83,11 +174,87 @@ body {
          display: none;
      }
  
-     nav ul li {
-         margin: 5px 0;
+     nav ul.show {
+         display: flex;
+     }
+ 
+     #publications {
+         padding: 10px;
+     }
+ }
+
+
+
+
+
+
+ 
+ h2, h3 {
+     color: #333;
+ }
+ 
+ ul {
+     list-style-type: none;
+     padding: 0;
+ }
+ 
+ .social-links {
+     margin-top: 20px;
+     display: flex;
+     gap: 15px;
+ }
+ 
+ .social-links a {
+     color: #333;
+     font-size: 24px;
+     transition: transform 0.3s;
+ }
+ 
+ .social-links a:hover {
+     transform: scale(1.2);
+ }
+ 
+ .icon {
+     width: 24px;
+     height: 24px;
+     vertical-align: middle;
+ }
+ 
+ footer {
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 10px 0;
+     position: fixed;
+     width: 100%;
+     bottom: 0;
+ }
+ 
+ @media (max-width: 768px) {
+     .menu-toggle {
+         display: block;
+     }
+ 
+     nav ul {
+         flex-direction: column;
+         display: none;
      }
  
      nav ul.show {
          display: flex;
      }
+ 
+     .intro-content {
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     #intro {
+         padding: 10px;
+     }
+ }
+ 
+ @keyframes fadeIn {
+     from { opacity: 0; }
+     to { opacity: 1; }
  }
