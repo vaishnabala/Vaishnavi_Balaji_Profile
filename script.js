@@ -1,20 +1,91 @@
-// Highlight the active section in the navbar
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.scroll-section');
-    const navLinks = document.querySelectorAll('nav a');
+// // script.js
 
-    let current = '';
+// document.addEventListener('DOMContentLoaded', () => {
+//     const links = document.querySelectorAll('nav ul li a');
+
+//     links.forEach(link => {
+//         link.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             const targetId = link.getAttribute('href').substring(1);
+//             const targetSection = document.getElementById(targetId);
+
+//             targetSection.scrollIntoView({ behavior: 'smooth' });
+//         });
+//     });
+// });
+
+
+// script.js
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const links = document.querySelectorAll('nav ul li a');
+//     const iframe = document.getElementById('content-frame');
+
+//     links.forEach(link => {
+//         link.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             const targetId = link.getAttribute('href').substring(1);
+//             iframe.src = `${targetId}.html`;
+//         });
+//     });
+// });
+
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const sections = document.querySelectorAll('section');
+//     const titles = {
+//         "index": "Greetings!!",
+//         "projects": "My Portfolio - Projects",
+//         "publications": "My Portfolio - Publications",
+//         "blogs": "My Portfolio - Blogs"
+//     };
+
+//     window.addEventListener('scroll', () => {
+//         let currentSection = 'index'; // Default section
+
+//         sections.forEach(section => {
+//             const sectionTop = section.offsetTop;
+//             const sectionHeight = section.clientHeight;
+//             if (window.scrollY >= sectionTop - sectionHeight / 3) {
+//                 currentSection = section.getAttribute('id');
+//             }
+//         });
+
+//         document.title = titles[currentSection];
+//     });
+// });
+
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const titles = {
+        "index": "Greetings!!",
+        "projects": "My Portfolio - Projects",
+        "publications": "My Portfolio - Publications",
+        "blogs": "My Portfolio - Blogs"
+    };
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.getAttribute('id');
+                document.title = titles[sectionId];
+            }
+        });
+    }, options);
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 50) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
+        observer.observe(section);
     });
 });
