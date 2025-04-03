@@ -89,3 +89,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+
+
+
+
+document.getElementById('clickText').addEventListener('click', function() {
+    const images = document.querySelectorAll('.image-container img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+        if (currentIndex < images.length) {
+            images[currentIndex].style.right = '0';
+            currentIndex++;
+        }
+    }
+
+    showNextImage(); // Show the first image on the first click
+
+    this.addEventListener('click', showNextImage); // Show the next image on subsequent clicks
+});
