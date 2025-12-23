@@ -105,7 +105,7 @@ function counter(id, end){ let n=0, el=$(id); const step=end/100;
   const int = setInterval(()=>{ n+=step; el.textContent=Math.round(n);
     if(n>=end) clearInterval(int); },20);
 }
-counter('#xp',7); counter('#students',400); counter('#projects-completed',15); counter('#citations',120);
+counter('#xp',5); counter('#students',400); counter('#projects-completed',15); counter('#citations',120);
 
 /* skill cloud */
 ['TensorFlow','PyTorch','Scikit-learn','Pandas','NumPy','JAX','Keras','Docker',
