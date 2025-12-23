@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaishnavi Balaji – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Vaishnavi Balaji – Developer, ML Enthusiast, and Tech Blogger">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="logo">VB</div>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div id="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="assets/avatar.jpg" alt="Vaishnavi Balaji avatar" class="avatar">
+      <h1>Hi, I’m <span>Vaishnavi Balaji</span></h1>
+      <p>B.Tech Information Technology | Aspiring Software Engineer & ML Enthusiast</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a final-year IT student passionate about full-stack development, data science, and using tech to solve real-world problems. My journey so far includes interning at CodeClause, completing 8+ online specialisations, and building projects ranging from web apps to ML models.</p>
+    <p>When I’m not coding, you’ll find me writing tech blogs or mentoring juniors in hackathons.</p>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid skills">
+      <div>Python</div><div>Java</div><div>JavaScript</div><div>HTML/CSS</div>
+      <div>React</div><div>Node.js</div><div>MySQL</div><div>MongoDB</div>
+      <div>Machine Learning (scikit-learn, pandas)</div>
+      <div>Cloud Basics (AWS EC2/S3)</div>
+      <div>Tableau</div><div>Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/fake-news.png" alt="Fake News Detector">
+        <h3>Fake News Detector</h3>
+        <p>ML model that classifies news articles as real or fake with 94 % accuracy (TF-IDF + Passive Aggressive).</p>
+        <a href="https://github.com/Vaishnabala/FakeNews-Detector" target="_blank">Source ↗</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/crop-recommend.png" alt="Crop Recommendation System">
+        <h3>Crop Recommendation System</h3>
+        <p>Recommends optimal crops based on soil & climate parameters; built with Random Forest and Streamlit UI.</p>
+        <a href="https://github.com/Vaishnabala/Crop-Recommendation" target="_blank">Source ↗</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/portfolio.png" alt="Personal Portfolio">
+        <h3>This Portfolio Site</h3>
+        <p>Static site hosted on GitHub Pages; vanilla HTML/CSS/JS with responsive design and CI using GitHub Actions.</p>
+        <a href="https://vaishnabala.github.io/Vaishnavi_Balaji_Profile/" target="_blank">Live ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certs">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>Google Data Analytics Professional Certificate – Coursera (2023)</li>
+      <li>IBM Applied Data Science Specialization – Coursera (2022)</li>
+      <li>AWS Cloud Foundations – AWS Academy (2022)</li>
+      <li>Microsoft AI Fundamentals (AI-900) – Microsoft Learn (2023)</li>
+    </ul>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2>Let’s Connect</h2>
+    <p>Open to internships, full-time roles, and collaborations.</p>
+    <div class="icons">
+      <a href="mailto:vaishnabala@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/vaishnavi-balaji/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/vaishnabala" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Vaishnavi Balaji.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
